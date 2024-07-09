@@ -4,7 +4,7 @@
 --  For more options, you can see `:help option-list`
 
 -- Make line numbers default
--- vim.opt.number = true
+vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
@@ -61,5 +61,13 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Use slashes as dir separator, also on Windows
+vim.opt.shellslash = true
+
+-- Options for Neovide
+vim.o.guifont = 'JetBrainsMono NF:h11:#e-subpixelantialias'
+vim.g.neovide_cursor_animation_length = 0.05
+vim.g.neovide_cursor_trail_size = 0.3
 
 -- vim: ts=2 sts=2 sw=2 et
