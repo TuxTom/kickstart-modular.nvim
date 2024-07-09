@@ -62,6 +62,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.cmd 'language en_US.utf8'
+vim.cmd 'language time C'
+
 -- Use slashes as dir separator, also on Windows
 local os = vim.loop.os_uname().sysname
 if os:match 'Windows' then
