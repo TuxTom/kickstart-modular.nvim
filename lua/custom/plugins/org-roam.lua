@@ -9,11 +9,19 @@ return {
       },
     },
     config = function()
+      local os = vim.loop.os_uname().sysname
+      local basepath = ''
+      if os:match 'Windows' then
+        basepath = '~'
+      else
+        basepath = '/mnt/c/Users/thkl2944'
+      end
+
       require('org-roam').setup {
-        directory = '~/org/roam',
+        directory = basepath .. '/org/roam',
         -- optional
         org_files = {
-          '~/org/**/*',
+          basepath .. '/org/**/*',
         },
       }
     end,
