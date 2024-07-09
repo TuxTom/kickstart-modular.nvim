@@ -63,7 +63,10 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Use slashes as dir separator, also on Windows
-vim.opt.shellslash = true
+local os = vim.loop.os_uname().sysname
+if os:match 'Windows' then
+  vim.opt.shellslash = true
+end
 
 -- Options for Neovide
 vim.o.guifont = 'JetBrainsMono NF:h11:#e-subpixelantialias'
