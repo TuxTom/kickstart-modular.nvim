@@ -33,6 +33,9 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- Use 'g' flag by default for substitutions
+vim.opt.gdefault = true
+
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
@@ -58,6 +61,10 @@ vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
+
+-- Use 'conceal' where supported
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = 'nc'
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
