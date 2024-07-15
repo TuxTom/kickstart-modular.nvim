@@ -17,6 +17,11 @@ return {
         org_default_notes_file = basepath .. '/org/notes.org',
       }
 
+      -- Document prefixes for whick-key
+      require('which-key').add {
+        { '<leader>o', group = '[O]rgmode' },
+      }
+
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
       -- add ~org~ to ignore_install
       -- require('nvim-treesitter.configs').setup({
