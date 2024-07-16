@@ -30,7 +30,18 @@ return {
             end,
           } },
           lualine_b = { 'branch', 'diff', 'diagnostics' },
-          lualine_c = { { 'buffers', show_filename_only = false } },
+          lualine_c = {
+            {
+              'filename',
+              path = 3,
+              shortening_target = 0,
+              fmt = function(str)
+                local sep = require('plenary.path').path.sep
+                local pattern = '(' .. sep .. '[_-%.,%%#!+=]-[A-Za-z0-9])[^' .. sep .. ']+(' .. sep .. ')'
+                return string.gsub(string.gsub(str, pattern, '%1%2'), pattern, '%1%2')
+              end,
+            },
+          },
           lualine_x = { { 'encoding', show_bomb = true }, 'fileformat', 'filetype' },
           lualine_y = { 'progress' },
           lualine_z = { 'location' },
@@ -38,7 +49,18 @@ return {
         inactive_sections = {
           lualine_a = {},
           lualine_b = {},
-          lualine_c = { { 'buffers', show_filename_only = false } },
+          lualine_c = {
+            {
+              'filename',
+              path = 3,
+              shortening_target = 0,
+              fmt = function(str)
+                local sep = require('plenary.path').path.sep
+                local pattern = '(' .. sep .. '[_-.,%%#!+=]-[A-Za-z0-9])[^' .. sep .. ']+(' .. sep .. ')'
+                return string.gsub(string.gsub(str, pattern, '%1%2'), pattern, '%1%2')
+              end,
+            },
+          },
           lualine_x = { 'location' },
           lualine_y = {},
           lualine_z = {},
