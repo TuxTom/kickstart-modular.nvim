@@ -73,10 +73,10 @@ vim.cmd 'language en_US.utf8'
 vim.cmd 'language time C'
 
 -- Use slashes as dir separator, also on Windows
-local os = vim.loop.os_uname().sysname
-if os:match 'Windows' then
-  vim.opt.shellslash = true
-end
+-- local os = vim.loop.os_uname().sysname
+-- if os:match 'Windows' then
+--   vim.opt.shellslash = true
+-- end
 
 -- Options for Neovide
 vim.o.guifont = 'JetBrainsMono Nerd Font:h11:#e-subpixelantialias'
