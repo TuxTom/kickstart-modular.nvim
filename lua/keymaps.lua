@@ -35,6 +35,8 @@ vim.keymap.set('n', '<leader>sN', function()
   require('telescope.builtin').live_grep { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files by grep' })
 
+vim.keymap.set('n', '<Tab>', 'za', { desc = 'Toggle fold' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
