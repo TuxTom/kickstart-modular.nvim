@@ -27,7 +27,7 @@ return {
 
       -- Document prefixes for which-key
       require('which-key').add {
-        { '<leader>n', group = 'Org-Roam [N]odes', mode = { 'n', 'v' } },
+        { '<leader>n', group = 'Org-Roam [N]odes', mode = { 'n', 'v' }, icon = { cat = 'extension', name = 'org' } },
         { '<leader>na', group = '[A]lias' },
         { '<leader>nd', group = '[D]iary' },
         { '<leader>no', group = '[O]rigin' },
