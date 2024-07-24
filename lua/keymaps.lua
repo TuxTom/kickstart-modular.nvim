@@ -31,9 +31,23 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', '<leader>wh', '<C-w><C-h>', { desc = '[W]indow -> left' })
+vim.keymap.set('n', '<leader>wl', '<C-w><C-l>', { desc = '[W]indow -> right' })
+vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = '[W]indow -> down' })
+vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = '[W]indow -> up' })
+vim.keymap.set('n', '<leader>wq', '<C-w><C-q>', { desc = '[W]indow -> [Q]uit' })
+vim.keymap.set('n', '<leader>w-', '<C-w><C-s>', { desc = '[W]indow -> horizontal split' })
+vim.keymap.set('n', '<leader>w/', '<C-w><C-v>', { desc = '[W]indow -> vertical split' })
+
 vim.keymap.set('n', '<leader>sN', function()
   require('telescope.builtin').live_grep { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files by grep' })
+vim.keymap.set('n', '<leader>sc', function()
+  require('telescope.builtin').commands()
+end, { desc = '[S]earch vim [C]ommands' })
+vim.keymap.set('n', '<leader>so', function()
+  require('telescope.builtin').vim_options()
+end, { desc = '[S]earch vim [O]ptions' })
 
 vim.keymap.set('n', '<Tab>', 'za', { desc = 'Toggle fold' })
 
