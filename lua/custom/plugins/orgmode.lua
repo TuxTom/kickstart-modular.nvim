@@ -19,7 +19,7 @@ return {
 
       -- Document prefixes for whick-key
       require('which-key').add {
-        { '<leader>o', group = '[O]rgmode' },
+        { '<leader>o', group = '[O]rgmode', icon = { cat = 'extension', name = 'org' } },
       }
 
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option

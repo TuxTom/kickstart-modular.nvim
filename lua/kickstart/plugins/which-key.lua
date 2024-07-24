@@ -57,14 +57,14 @@ return {
 
       -- Document existing key chains
       spec = {
-        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
+        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' }, icon = { icon = ' ', color = 'orange' } },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>w', group = '[W]orkspace' },
-        { '<leader>t', group = '[T]oggle' },
+        { '<leader>s', group = '[S]earch', icon = { icon = ' ', color = 'blue' } },
+        { '<leader>w', group = '[W]orkspace/[W]indow', icon = { icon = ' ', color = 'blue' } },
+        { '<leader>t', group = '[T]oggle', icon = { icon = ' ', color = 'yellow' } },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-        { '<leader>g', group = '[G]it' },
+        { '<leader>g', group = '[G]it', icon = { cat = 'extension', name = 'git' } },
       },
     },
   },
