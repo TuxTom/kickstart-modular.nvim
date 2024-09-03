@@ -29,5 +29,6 @@ return {
       --   ignore_install = { 'org' },
       -- })
     end,
+    cond = not vim.g.vscode,
   },
 }

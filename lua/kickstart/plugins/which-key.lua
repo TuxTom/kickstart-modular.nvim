@@ -67,6 +67,7 @@ return {
         { '<leader>g', group = '[G]it', icon = { cat = 'extension', name = 'git' } },
       },
     },
+    cond = not vim.g.vscode,
   },
 }
 -- vim: ts=2 sts=2 sw=2 et
