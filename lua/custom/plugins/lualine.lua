@@ -5,10 +5,11 @@ return {
     config = function()
       require('lualine').setup {
         options = {
-          icons_enabled = true,
+          -- vscode does not allow to configure the status bar font, so we cannot use a nerd font
+          icons_enabled = not vim.g.vscode,
           theme = 'auto',
-          component_separators = { left = '', right = '' },
-          section_separators = { left = '', right = '' },
+          component_separators = vim.g.vscode and { left = '|', right = '|' } or { left = '', right = '' },
+          section_separators = vim.g.vscode and { left = '|', right = '|' } or { left = '', right = '' },
           disabled_filetypes = {
             statusline = {},
             winbar = {},
