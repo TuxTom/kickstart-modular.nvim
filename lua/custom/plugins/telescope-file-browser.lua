@@ -10,5 +10,6 @@ return {
         require('telescope').extensions.file_browser.file_browser { path = '%:p:h', cwd_to_path = true }
       end, { desc = '[S]earch [F]iles from %:p:h' })
     end,
+    cond = not vim.g.vscode,
   },
 }

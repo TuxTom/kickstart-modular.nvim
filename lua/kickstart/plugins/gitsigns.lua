@@ -65,6 +65,7 @@ return {
         map('n', '<leader>tD', gitsigns.toggle_deleted, { desc = '[T]oggle git show [D]eleted' })
       end,
     },
+    cond = not vim.g.vscode,
   },
 }
 -- vim: ts=2 sts=2 sw=2 et

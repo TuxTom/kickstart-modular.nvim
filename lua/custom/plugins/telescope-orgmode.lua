@@ -13,5 +13,6 @@ return {
       vim.keymap.set('n', '<leader>so', require('telescope').extensions.orgmode.search_headings, { desc = '[O]rg headings' })
       vim.keymap.set('n', '<leader>oi', require('telescope').extensions.orgmode.insert_link, { desc = '[I]nsert link' })
     end,
+    cond = not vim.g.vscode,
   },
 }

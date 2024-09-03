@@ -33,5 +33,6 @@ return {
         { '<leader>no', group = '[O]rigin' },
       }
     end,
+    cond = not vim.g.vscode,
   },
 }
