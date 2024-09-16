@@ -33,13 +33,22 @@ return {
           lualine_b = { 'branch', 'diff', 'diagnostics' },
           lualine_c = {
             {
+              function()
+                local cwd = vim.fn.fnamemodify(vim.fn.getcwd(), ':~')
+                if cwd == '~' then
+                  return '󰋜'
+                end
+                return string.gsub(cwd, '~/', '󰋜 /')
+              end,
+            },
+            {
               'filename',
-              path = 3,
-              shortening_target = 0,
+              path = 1,
               fmt = function(str)
-                local sep = require('plenary.path').path.sep
-                local pattern = '(' .. sep .. '[_-%.,%%#!+=]-[A-Za-z0-9])[^' .. sep .. ']+(' .. sep .. ')'
-                return string.gsub(string.gsub(str, pattern, '%1%2'), pattern, '%1%2')
+                if str == '~' then
+                  return '󰋜'
+                end
+                return string.gsub(str, '~/', '󰋜 /')
               end,
             },
           },
@@ -52,13 +61,22 @@ return {
           lualine_b = {},
           lualine_c = {
             {
+              function()
+                local cwd = vim.fn.fnamemodify(vim.fn.getcwd(), ':~')
+                if cwd == '~' then
+                  return '󰋜'
+                end
+                return string.gsub(cwd, '~/', '󰋜 /')
+              end,
+            },
+            {
               'filename',
-              path = 3,
-              shortening_target = 0,
+              path = 1,
               fmt = function(str)
-                local sep = require('plenary.path').path.sep
-                local pattern = '(' .. sep .. '[_-.,%%#!+=]-[A-Za-z0-9])[^' .. sep .. ']+(' .. sep .. ')'
-                return string.gsub(string.gsub(str, pattern, '%1%2'), pattern, '%1%2')
+                if str == '~' then
+                  return '󰋜'
+                end
+                return string.gsub(str, '~/', '󰋜 /')
               end,
             },
           },
