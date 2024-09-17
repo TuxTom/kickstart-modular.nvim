@@ -56,6 +56,14 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+vim.opt.fillchars = {
+  diff = '╱', -- alternatives = ⣿ ░ ─
+  msgsep = '‾',
+  foldopen = '▼',
+  foldsep = '│',
+  foldclose = '▶',
+}
+
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
 
