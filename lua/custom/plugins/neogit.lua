@@ -1,6 +1,7 @@
 return {
   {
     'NeogitOrg/neogit',
+    tag = 'v1.0.0',
     event = 'VeryLazy',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -14,7 +15,7 @@ return {
       {
         '<leader>gg',
         function()
-          require('neogit').open { cwd = '%:p:h' }
+          require('neogit').open { cwd = vim.fn.expand '%:p:h' }
         end,
         desc = 'NeoGit (current file)',
       },
