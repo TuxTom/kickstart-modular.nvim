@@ -49,7 +49,7 @@ vim.keymap.set('n', '<leader>so', function()
   require('telescope.builtin').vim_options()
 end, { desc = '[S]earch vim [O]ptions' })
 
-vim.keymap.set('n', '<Tab>', 'za', { desc = 'Toggle fold' })
+-- vim.keymap.set('n', '<Tab>', 'za', { desc = 'Toggle fold' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
