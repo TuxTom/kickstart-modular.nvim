@@ -52,7 +52,7 @@ return {
               end,
             },
           },
-          lualine_x = { { 'encoding', show_bomb = true }, 'fileformat', 'filetype' },
+          lualine_x = { { 'encoding', show_bomb = true }, 'fileformat', 'filetype', { 'copilot', show_colors = true } },
           lualine_y = { 'progress' },
           lualine_z = { 'location' },
         },
