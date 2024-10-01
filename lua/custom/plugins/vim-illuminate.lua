@@ -5,5 +5,6 @@ return {
     config = function()
       require('illuminate').configure {}
     end,
+    cond = not vim.g.vscode,
   },
 }

@@ -4,5 +4,6 @@ return {
     config = function()
       require('ibl').setup()
     end,
+    cond = not vim.g.vscode,
   },
 }

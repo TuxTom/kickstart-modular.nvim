@@ -4,5 +4,6 @@ return {
     config = function()
       require('copilot_cmp').setup()
     end,
+    cond = not vim.g.vscode,
   },
 }
