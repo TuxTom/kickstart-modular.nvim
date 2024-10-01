@@ -12,5 +12,6 @@ return {
         end, { desc = '[S]earch [P]rojects' }),
       }
     end,
+    cond = not vim.g.vscode,
   },
 }
