@@ -4,7 +4,14 @@ return {
     event = 'VeryLazy',
     dependencies = {
       'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
+      {
+        'rcarriga/nvim-notify',
+        config = function()
+          require('notify').setup {
+            fps = 60,
+          }
+        end,
+      },
     },
     config = function()
       require('noice').setup {
