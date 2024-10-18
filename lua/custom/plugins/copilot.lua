@@ -13,6 +13,9 @@ return {
         },
       }
     end,
+    keys = {
+      { '<leader>tc', '<cmd>Copilot toggle', '[T]oggle [C]opilot' },
+    },
     cond = not vim.g.vscode,
   },
 }
