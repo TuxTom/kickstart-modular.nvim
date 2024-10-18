@@ -57,7 +57,7 @@ return {
 
       -- Document existing key chains
       spec = {
-        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' }, icon = { icon = ' ', color = 'orange' } },
+        { '<leader>c', group = '[C]ode/[C]opilot', mode = { 'n', 'x' }, icon = { icon = ' ', color = 'orange' } },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch', icon = { icon = ' ', color = 'blue' } },
