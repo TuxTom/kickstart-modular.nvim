@@ -92,7 +92,7 @@ vim.opt.foldlevelstart = 99
 -- end
 
 -- Options for Neovide
-vim.o.guifont = 'JetBrainsMono Nerd Font:h11:#e-subpixelantialias'
+vim.o.guifont = 'JetBrainsMono Nerd Font:h10:#e-subpixelantialias'
 vim.g.neovide_cursor_animation_length = 0.05
 vim.g.neovide_cursor_trail_size = 0.3
 
