@@ -15,6 +15,22 @@ return {
       vim.keymap.set('n', '<leader>sD', function()
         require('telescope').extensions.file_browser.file_browser { depth = false, path = '%:p:h', cwd_to_path = true }
       end, { desc = '[S]earch files in [D]ir from %:p:h recursively' })
+
+      local fb_actions = require('telescope').extensions.file_browser.actions
+      require('telescope').setup {
+        extensions = {
+          file_browser = {
+            mappings = {
+              ['n'] = {
+                ['<C-h>'] = fb_actions.toggle_hidden,
+              },
+              ['i'] = {
+                ['<C-h>'] = fb_actions.toggle_hidden,
+              },
+            },
+          },
+        },
+      }
     end,
     cond = not vim.g.vscode,
   },
