@@ -36,6 +36,7 @@ vim.keymap.set('n', '<leader>wl', '<C-w><C-l>', { desc = '[W]indow -> right' })
 vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = '[W]indow -> down' })
 vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = '[W]indow -> up' })
 vim.keymap.set('n', '<leader>wq', '<C-w><C-q>', { desc = '[W]indow -> [Q]uit' })
+vim.keymap.set('n', '<leader>wQ', ':qa<CR>', { desc = '[W]indow -> [Q]uit all' })
 vim.keymap.set('n', '<leader>w-', '<C-w><C-s>', { desc = '[W]indow -> horizontal split' })
 vim.keymap.set('n', '<leader>w/', '<C-w><C-v>', { desc = '[W]indow -> vertical split' })
 
@@ -43,6 +44,11 @@ vim.keymap.set('n', '<leader>bd', ':bdel<CR>', { desc = '[B]uffer -> [D]elete' }
 vim.keymap.set('n', '<leader>bD', ':bdel!<CR>', { desc = '[B]uffer -> force [D]elete' })
 vim.keymap.set('n', '<leader>bn', ':enew<CR>', { desc = '[B]uffer -> [N]ew' })
 vim.keymap.set('n', '<leader>bs', ':w<CR>', { desc = '[B]uffer -> [S]ave' })
+
+vim.keymap.set('v', '<leader>cl', ':lua<CR>', { desc = '[C]ode -> execute as [L]ua' })
+vim.keymap.set('n', '<leader>cl', ':lua <C-r><C-l><CR>', { desc = '[C]ode -> execute line as [L]ua' })
+vim.keymap.set('v', '<leader>cv', '"vy:lua<CR>', { desc = '[C]ode -> execute as [L]ua' })
+vim.keymap.set('n', '<leader>cv', ':execute getline(".")<CR>', { desc = '[C]ode -> execute line as [V]imscript' })
 
 vim.keymap.set('n', '<leader>sN', function()
   require('telescope.builtin').live_grep { cwd = vim.fn.stdpath 'config' }
