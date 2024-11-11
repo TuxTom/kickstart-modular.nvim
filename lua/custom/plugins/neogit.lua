@@ -9,6 +9,11 @@ return {
     },
     opts = {
       graph_style = 'unicode',
+      signs = {
+        hunk = { '', '' },
+        item = { '▶', '▼' },
+        section = { '▶', '▼' },
+      },
     },
     keys = {
       {
