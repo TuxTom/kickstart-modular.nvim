@@ -17,11 +17,10 @@ return {
         local select = require 'CopilotChat.select'
         return select.visual(source) or select.buffer(source)
       end,
+      chat_autocomplete = true,
     },
     config = function(_, opts)
       require('CopilotChat').setup(opts)
-
-      require('CopilotChat.integrations.cmp').setup()
 
       require('which-key').add {
         { '<leader>cc', group = '[C]opilot[C]hat', icon = { icon = ' ', color = 'orange' } },
