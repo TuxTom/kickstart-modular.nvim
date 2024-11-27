@@ -19,7 +19,7 @@ return {
           ['core.dirman'] = {
             config = {
               workspaces = {
-                notes = (vim.uv.os_uname().sysname == 'Linux' and '/mnt/c/' or 'C:/') .. 'Users/thkl2944/norg',
+                notes = '~/norg',
               },
               default_workspace = 'notes',
             },
