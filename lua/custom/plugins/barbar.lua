@@ -33,5 +33,6 @@ return {
       { '<leader>bs', ':w<CR>', desc = '[B]uffer --> [S]ave' },
       { '<leader>bS', ':saveas ', desc = '[B]uffer --> [S]ave as...' },
     },
+    cond = not vim.g.vscode,
   },
 }
